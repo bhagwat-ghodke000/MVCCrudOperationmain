@@ -10,5 +10,6 @@ public interface UserServiceI {
 	public boolean loginCheckServiceLayer(User user);
 	
 	public List<User> getAll();
+	public List<User> update(User user);
 	
 }

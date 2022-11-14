@@ -52,4 +52,22 @@ public class UserDaoImpl implements UserDaoI {
 		return list;
 	}
 
+
+	@Override
+	public List<User> updateData(User user) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		session.update(user);
+		session.getTransaction().commit();
+		
+		
+		Query query = session.createQuery("from User");
+		List<User> list = query.getResultList();
+		return list;
+	}
+
+
+	
+
 }
