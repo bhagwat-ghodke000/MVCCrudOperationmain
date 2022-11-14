@@ -67,5 +67,22 @@ public class UserController {
 		
 	}
 	
+	@GetMapping("/update")
+	public String preUpdate() {
+		
+		return "update";
+		
+		
+	}
+
+	
+	@PostMapping("/postupdate")
+	public String update(User user,Model model) {
+		List<User> update = userServiceI.update(user);
+		model.addAttribute("list",update);
+		return "updatelist";
+		
+	}
+	
 
 }

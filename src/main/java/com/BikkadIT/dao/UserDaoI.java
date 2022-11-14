@@ -9,5 +9,6 @@ public interface UserDaoI {
 	public int saveUserToDb(User user);
 	public List<User> getAllData();
 	public List<User> getAllDataFromDB();
+	public List<User> updateData(User user);
 	
 }

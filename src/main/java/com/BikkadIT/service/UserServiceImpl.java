@@ -43,4 +43,11 @@ public class UserServiceImpl  implements UserServiceI{
 		return list;
 	}
 
+	@Override
+	public List<User> update(User user) {
+		// TODO Auto-generated method stub
+		List<User> list = userDaoI.updateData(user);
+		return list;
+	}
+
 }
